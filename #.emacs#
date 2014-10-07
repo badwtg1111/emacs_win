@@ -1,0 +1,30 @@
+;; 指针颜色
+(set-cursor-color "white")
+
+;; 鼠标颜色
+(set-mouse-color "blue")
+
+;; display line number
+(add-to-list 'load-path "~/library/elisp/")
+(load "linum.el")
+(require 'linum)
+(global-linum-mode 1)
+; enable erase buffer command
+(put 'erase-buffer 'disabled nil)
+; set tab to 4 space
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+;next
+
+;; display tab key
+(require 'tab-display)
+
+;; for w3m
+(add-to-list 'exec-path "C:/emacs-24.3/w3m/")
+(require 'w3m-load) 
+(setq w3m-use-favicon nil) 
+(setq w3m-command-arguments '("-cookie" "-F")) 
+(setq w3m-use-cookies t) 
+(setq w3m-home-page "http://forum.ubuntu.org.cn")
+
+
