@@ -21,6 +21,7 @@
 
 ;; for w3m
 (add-to-list 'exec-path "C:/emacs-24.3/w3m/")
+(load "w3m-load.el")
 (require 'w3m-load) 
 (setq w3m-use-favicon nil) 
 (setq w3m-command-arguments '("-cookie" "-F")) 
@@ -37,3 +38,18 @@
 (color-theme-calm-forest)
 
 ;; 启动时的大小和屏幕中的位置
+(setq default-frame-alist
+ '((height . 35)(width . 100)(menubar-lines . 20)(tool-bar-lines . 0)))
+
+;; 读取脚本
+(load "base.el")
+
+;; window-numbering
+(add-to-list 'load-path "~/library/window-numbering.el")
+(load "window-numbering.el")
+
+;; emacs powerline
+(add-to-list 'load-path "~/library/emacs-powerline")
+(require 'powerline)
+
+
